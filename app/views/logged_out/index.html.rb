@@ -3,27 +3,24 @@ class Views::LoggedOut::Index < Views::Base
     wide_row(:'background-cover') {
       div(class: %[clear-panel text-center]) {
         h1 {
-          span "Slogan", class: :'text-primary'
+          span "Give a Growler. Take a Growler.", class: :'text-primary'
           br
-          span "Tagline", class: :'text-alert'
+          span "Better than local.", class: :'text-alert'
         }
-        h4 "Solution X for Problem Y"
+        h4 "Get feedback on beer from other brewers...then start a brewery together."
 
-        p "Why this is right for you. " * 8
+        p "I often brew several gallons at a time and trade with friends. I started
+this site to expand the network of people I could trade beer with to get more diverse
+palate and inspire creativity in brewing."
 
         render partial: "take_action_button"
       }
     }
-    wide_row(:'palate-white-on-green') {
-      blockquote(class: :'blockquote-grande') {
-        text "\"You have brains in your head. You have feet in your shoes. You can steer yourself in any direction you choose. You're on your own, and you know what you know. And you are the guy who'll decide where to go.\""
-        cite "Dr. Seuss"
-      }
-    }
     wide_row(:'palate-green-on-white text-center') {
-      h4 "About Product Z"
-      p "We do this onne thing really well. Squid ennui cray trust fund fixie, forage Odd Future. Godard actually ennui, put a bird on it polaroid four loko meditation whatever swag food truck letterpress. Tilde Vice Tumblr, Helvetica quinoa meggings locavore. Vegan freegan disrupt synth mumblecore banjo slow-carb messenger bag paleo, Wes Anderson Echo Park."
-      p "Click below to sign up for our service. Marfa synth beard Shoreditch mixtape, tousled messenger bag next level cronut. Salvia four dollar toast tofu, you probably haven't heard of them raw denim polaroid pork belly Shoreditch."
+      h4 "About Homebrew Swap"
+      p "We do one thing really well- we introduce you to other brewers in your
+vicinity to inspire your brewing. Trade pints, growlers, tips, equiptment, etc."
+      p "Click below to sign up. We'll contact you shortly and get you trading."
       render partial: "take_action_button"
     }
     javascript "analytics.track('acquisition/visit')"

@@ -96,8 +96,8 @@ $font-family-serif: "Slabo 27px", Georgia, Cambria, "Times New Roman", Times, se
 // We use these to define default font weights
 // $font-weight-normal: normal !default;
 // $font-weight-bold: bold !default;
-$palate1-primary: #6AB79A;
-$palate1-alert: #EC4853;
+$palate1-primary: #2a73b7;
+$palate1-alert: #ecc343;
 
 // We use these as default colors throughout
 $primary-color: $palate1-primary; // teal
@@ -1576,8 +1576,8 @@ i { margin: 5px }
 }
 
 .background-cover {
-  background-size: cover;
-  background-image: image-url("http://placekitten.com/g/1440/700");
+  background-size: contain;
+  background-image: asset-url("homebrew.jpg");
   height: 700px;
 }
 

@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   resources :accounts, only: %i[new create edit update]
   get 'take_action' => "logged_out#take_action"
 
-  resources :accounts, only: [:new, :create, :edit, :update]
   resource :session, only: [:new, :create, :destroy]
   resources :password_resets, only: [:new, :create, :edit, :update]
 

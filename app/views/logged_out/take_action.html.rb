@@ -1,45 +1,42 @@
 class Views::LoggedOut::TakeAction < Views::Base
   def content
     wide_row(:'background-cover') {
-      form {
-
+      form_tag accounts_path, method: 'post' do
         div(class: %[clear-panel form]) {
-          h4 "Take Action"
-          p "Answering a few questions will help us decide whether to get in touch with you!"
+          h4 "Join"
+          p "Tell us a few things so we can get you started!"
           div(class: "row") {
             div(class: "medium-6 columns") {
               label {
                 text "First Name"
-                input(type: "text", placeholder: "First Name")
+                text_field_tag :first_name
               }
             }
             div(class: "medium-6 columns") {
               label {
                 text "Last Name"
-                input(type: "text", placeholder: "Last Name")
+                text_field_tag :last_name
               }
             }
-          }
-          div(class: "row") {
-            div(class: "medium-12 columns") {
+            div(class: "medium-6 columns") {
+              label {
+                text "Zip Code"
+                text_field_tag :zip_code
+              }
+            }
+            div(class: "medium-6 columns") {
               label {
                 text "Email"
-                input(type: "text", placeholder: "you@example.com")
+                text_field_tag :email
               }
             }
           }
-          p "This information will not be shared"
-        }
-        div(class: "text-center") {
-          br
-          render partial: "activation_button"
-        }
-        p(class: "white-text"){
-         text "After you create your profile you will be contacted by a concierge to setup your first event!"
-        }
-      }
-    }
 
+          p "This information will not be shared"
+          submit_tag "Join", class: buttonish(:large, :alert, :bordered), onclick: "analytics.track('activation/signup')"
+        }
+      end
+    }
   end
 
   private
@@ -58,4 +55,5 @@ class Views::LoggedOut::TakeAction < Views::Base
       }
     }
   end
+
 end

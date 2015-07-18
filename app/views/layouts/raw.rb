@@ -30,7 +30,7 @@ class Views::Layouts::Raw < Views::Base
               li(:class => "name") {
                 h1 {
                   a(:href => "/") {
-                    image_tag "http://placekitten.com/g/90/57", class: "logo", alt: "#{Rails.application.config.project_name} Logo"
+                    text "Homebrew Swap"
                   }
                 }
               }
@@ -46,7 +46,7 @@ class Views::Layouts::Raw < Views::Base
               ul(class: "right") {
                 li(class: "active") {
                   a(href: take_action_path) {
-                    text "Take Action"
+                    text "Join"
                   }
                 }
               }
