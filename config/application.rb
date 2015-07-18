@@ -22,16 +22,17 @@ module CitizenRails
 
     # one HTTP auth password for the entire site
     config.require_site_login = false # disabled by default
-    config.site_username = 'citizen'
-    config.site_password = 'code'
+    config.site_username = 'homebrew'
+    config.site_password = 'swap'
 
     config.allow_signup = true
-    config.company_name = "Citizen Code"
-    config.project_name = "Citizen Rails"
-    config.project_slug = "citizen_rails" # must not use dashes
+    config.company_name = "Homebrew Swap"
+    config.project_name = "Homebrew Swap"
+    config.project_slug = "homebrew_swap" # must not use dashes
     # appears in main layout meta tag
-    config.project_description = "Citizen Rails is an incredible template for early customer development work!"
-    config.contact_email = "contact@example.com"
+    config.project_description = "Homebrew swap is the place to trade growlers of fresh
+ beer."
+    config.contact_email = "heather@citizencode.io"
 
     # lib/ is for code that is entirely independent of your Rails app
     # app/lib/ is for code that expects Rails (esp. models) but which is not itself a model
