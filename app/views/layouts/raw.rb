@@ -29,7 +29,7 @@ class Views::Layouts::Raw < Views::Base
             ul(:class => "title-area") {
               li(:class => "name") {
                 h1 {
-                  a(:href => "/") {
+                  a(:href => beers_path) {
                     text "Homebrew Swap"
                   }
                 }
@@ -38,16 +38,6 @@ class Views::Layouts::Raw < Views::Base
               li(:class => "toggle-topbar menu-icon") {
                 a(:href => "#") {
                   span("Menu")
-                }
-              }
-            }
-
-            section(class: "top-bar-section") {
-              ul(class: "right") {
-                li(class: "active") {
-                  a(href: take_action_path) {
-                    text "Join"
-                  }
                 }
               }
             }

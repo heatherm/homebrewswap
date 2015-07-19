@@ -14,7 +14,7 @@ class AccountsController < ApplicationController
     authorize @account
     if @account.persisted?
       login_without_credentials(@account)
-      redirect_to my_account_path
+      redirect_to beers_path
     else
       render :new, layout: 'layouts/logged_out'
     end

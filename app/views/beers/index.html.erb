@@ -1,0 +1,58 @@
+<p id="notice"><%= notice %></p>
+<div class="clear-panel form">
+  <h1>My Beers</h1>
+  <%= link_to 'Add a new beer to share', new_beer_path %>
+  <br/>
+  <br/>
+  <table>
+    <thead>
+      <tr>
+        <th>Style</th>
+        <th>Brewed on</th>
+        <th>Growlers remaining</th>
+        <th>Location</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @my_beers.each do |beer| %>
+        <tr>
+          <td><%= beer.style %></td>
+          <td><%= beer.brewed_on %></td>
+          <td><%= beer.growlers_remaining %></td>
+          <td><%= beer.account.zip_code %></td>
+          <td><%= link_to 'Show', beer %></td>
+          <td><%= link_to 'Edit', edit_beer_path(beer) %></td>
+          <td><%= link_to 'Destroy', beer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <h1>Available Beers</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Style</th>
+        <th>Brewed on</th>
+        <th>Growlers remaining</th>
+        <th>Location</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @beers.each do |beer| %>
+        <tr>
+          <td><%= beer.style %></td>
+          <td><%= beer.brewed_on %></td>
+          <td><%= beer.growlers_remaining %></td>
+          <td><%= beer.account.zip_code %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+</div>

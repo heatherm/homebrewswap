@@ -264,7 +264,7 @@ $header-font-color: $steel;
 // We use these to style anchors
 // $anchor-text-decoration: none;
 // $anchor-text-decoration-hover: none;
-// $anchor-font-color: $primary-color;
+$anchor-font-color: $alert-color;
 // $anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
 
 // We use these to style the <hr> element
@@ -1458,7 +1458,7 @@ $topbar-link-dropdown-padding: ($topbar-height / 3);
 // Helper mixins =======================
 
 @mixin fix-height($direction: left) {
-	position: absoulte;
+	position: absolute;
 	height: 100%;
 	$direction: 0;
 	top: $topbar-height;
@@ -1472,19 +1472,7 @@ i { margin: 5px }
 	@include grid-row($behavior: collapse);
 }
 
-.app-nav{
-	@include grid-column($columns: 12);
-	@include padding-leader(.5);
-	background: $primary-color;
-	li a:not(.button){
-		color: white;
-	}
-}
 .app-content{
-	@include grid-column($columns: 12);
-	@include padding-leader(.5);
-}
-.app-content-wide{
 	@include grid-column($columns: 12);
 	@include padding-leader(.5);
 }
@@ -1588,7 +1576,6 @@ i { margin: 5px }
   h1, h2, h3, h4, .button {
     @extend %chunko-text;
     text-align: center;
-    color: $palate1-primary;
   }
 }
 

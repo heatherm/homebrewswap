@@ -13,7 +13,7 @@ class Views::LoggedOut::Index < Views::Base
 this site to expand the network of people I could trade beer with to get more diverse
 palate and inspire creativity in brewing."
 
-        render partial: "take_action_button"
+        render partial: "activation_button"
       }
     }
     wide_row(:'palate-green-on-white text-center') {
@@ -21,7 +21,7 @@ palate and inspire creativity in brewing."
       p "We do one thing really well- we introduce you to other brewers in your
 vicinity to inspire your brewing. Trade pints, growlers, tips, equiptment, etc."
       p "Click below to sign up. We'll contact you shortly and get you trading."
-      render partial: "take_action_button"
+      render partial: "activation_button"
     }
     javascript "analytics.track('acquisition/visit')"
   end

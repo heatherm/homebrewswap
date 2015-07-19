@@ -3,6 +3,7 @@ class Views::Accounts::New < Views::Base
 
   def content
     row {
+
       column(%i[small-12 large-6], class: "large-centered") {
         form_for account do |f|
           div(class: %[clear-panel form]) {
@@ -39,6 +40,8 @@ class Views::Accounts::New < Views::Base
               column(:"large-12") {
                 f.submit class: buttonish(:large, :alert, :bordered), onclick: "analytics
 .track('activation/signup')"
+                br
+                link_to "Click here to Login instead", new_session_path
               }
             }
           }
