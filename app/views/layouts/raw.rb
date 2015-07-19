@@ -29,7 +29,7 @@ class Views::Layouts::Raw < Views::Base
             ul(:class => "title-area") {
               li(:class => "name") {
                 h1 {
-                  a(:href => beers_path) {
+                  a(:href => logged_in? ? beers_url : root_url) {
                     text "Homebrew Swap"
                   }
                 }
